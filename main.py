@@ -23,9 +23,7 @@ data = {"name" : f"{server_name} ({free_space})"}
 headers = {"Authorization": f"Bearer {api_token}"}
 response = requests.patch(full_url, data=data, headers=headers).json()
 status_page_update_url = stupdateurl + statuspage_id + "/resources/" + resource_id
-print(status_page_update_url)
 data = {"public_name" : f"{server_name} ({free_space})"}
 response2 = requests.patch(status_page_update_url, data=data, headers=headers).json()
-print(response2)
 
 
